@@ -1,4 +1,4 @@
-package tests;
+package br.com.softdesign.tests;
 
 import org.junit.*;
 import org.openqa.selenium.By;
@@ -32,9 +32,9 @@ public class PesquisaGoogleTest {
         // driver.findElement(By.name("q")).sendKeys("SoftDesign");
 
         WebElement botaoPesquisa = driver.findElement(By.name("btnK"));
-        botaoPesquisa.click();
+        botaoPesquisa.submit();
 
-        Assert.assertEquals(driver.findElement(By.className("r"))
+        Assert.assertEquals(driver.findElement(By.className("LC20lb"))
                 .getText(), "SoftDesign: Desenvolvimento de Software, Apps, Sistemas e ...");
     }
 }
